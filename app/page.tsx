@@ -3,7 +3,7 @@ import { compareDesc, format, parseISO } from "date-fns";
 import { allPosts, Post } from "contentlayer/generated";
 import Link from "next/link";
 
-import hero from "../public/writing.png";
+import hero from "../public/greenhouse.png";
 
 export default function Home() {
   const essays = allPosts.sort((a, b) =>
@@ -22,7 +22,7 @@ export default function Home() {
           className="h-full w-full object-cover"
         />
       </div>
-      <div className="md:w-1/2 w-full space-y-4 p-8">
+      <div className="md:w-1/2 w-full space-y-4 py-8 p-16">
         {essays.map((post, idx) => (
           <Card key={idx} {...post} />
         ))}
@@ -33,12 +33,12 @@ export default function Home() {
 
 function Card(essay: Post) {
   return (
-    <Link href={essay.url} className="flex place-content-around">
-      <p className="font-medium text-md w-full capitalize mr-4">
+    <Link href={essay.url} className="flex items-center place-content-around">
+      <p className="font-medium text-md flex-none capitalize mr-4">
         {essay.title}
       </p>
-      <div className="border-top border-dotted w-full" />
-      <p className="text-gray-500 place-self-end text-md capitalize ml-4 self-center">
+      <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-800" />
+      <p className="text-gray-500 place-self-end text-md capitalize ml-4 self-center flex space-x-2">
         {format(parseISO(essay.date), "d/MM/yy")}
       </p>
     </Link>
