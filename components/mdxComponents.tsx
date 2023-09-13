@@ -22,12 +22,16 @@ export default {
     </a>
   ),
 
+  li: ({ ...props }) => <p className="ml-4 my-2">• {props.children}</p>,
+
   a: ({ href, ...props }) => (
     <Link
       href={href}
-      className="underline underline-offset-1"
-      {...props}
+      className="text-[#3291ff] hover:underline"
+      target="_blank"
+      rel="noopener noreferrer"
       passHref
+      {...props}
     >
       {props.children}
     </Link>
