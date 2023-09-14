@@ -1,0 +1,29 @@
+---
+title: Von Neumann Architecture
+date: 2023-09-14
+subject: Computer Science
+image: /images/von-neumann.png
+---
+
+Notes made on this video: [GCSE (J277) 1.1 Von Neumann architecture](https://student.craigndave.org/videos/ocr-gcse-j277-slr-1-1-von-neumann-architecture)
+
+# Notes
+- Von Neumann designed computers that stored programs.
+- Key characteristics are: CPU, CU, ALU, and an Internal Cache and Clock.
+- Each instruction is stored with an address in memory.
+- The CPU fetches the instruction from memory, decodes it, and executes it.
+- PC holds the memory address of the next instruction to be fetched. It is incremented by one after each instruction.
+- MAR holds the address of the memory location to be accessed.
+- MDR holds the data that has been fetched from memory.
+- The Accumulator is a register that stores the results of calculations.
+
+### Fetch stage
+- The program counter is checked as it holds the address of the next instruction to be executed.
+- This address is sent to the MAR.
+- The address in the PC is then incremented by one to point to the next instruction.
+
+### Decode stage
+- The instruction is in the CU, which decodes it.
+
+### Execute stage
+- The CU sends the instruction to the ALU, which executes it.

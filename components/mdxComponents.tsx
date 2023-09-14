@@ -21,6 +21,15 @@ export default {
       {props.children}
     </a>
   ),
+  h3: (props) => (
+    <h1
+      className="text-xl font-semibold mb-2 mt-4"
+      id={props.children}
+      {...props}
+    >
+      {props.children}
+    </h1>
+  ),
 
   li: ({ ...props }) => <p className="ml-4 my-2">• {props.children}</p>,
 
