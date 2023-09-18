@@ -51,7 +51,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         alt="Article Header image"
         className="h-72 w-screen object-cover mt-10"
       />
-      <div className="max-w-2xl mx-8">
+      <div className="max-w-2xl m-8">
         <h1 className="text-4xl font-semibold mb-8 capitalize mt-8">
           {essay.title}
         </h1>
