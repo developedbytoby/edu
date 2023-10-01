@@ -9,6 +9,7 @@ export const Post = defineDocumentType(() => ({
     date: { type: "date", required: true },
     subject: { type: "string", required: true },
     image: { type: "string", required: true },
+    private: { type: "boolean", default: false }, // still accessible from git, and via the url, but not listed in the index. so yeah, not really private.
   },
   computedFields: {
     url: {

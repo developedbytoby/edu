@@ -31,7 +31,7 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
       className={`mx-auto w-screen justify-center place-items-center grid ${inter.className}`}
     >
       <Toaster position="top-right" />
-      <div className="bg-white border-b w-full p-2 fixed top-0 flex space-x-4">
+      <div className="bg-white border-b w-full p-2 fixed top-0 left-0 flex space-x-4">
         <div className="flex">
           <Link href="/" className="flex text-gray-500 w-max">
             <Image src={back} alt="Back arrow" />

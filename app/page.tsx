@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <div className="md:w-1/2 w-full space-y-4 py-8 p-16">
         {essays.map((post, idx) => (
-          <Card key={idx} {...post} />
+          <>{!post.private && <Card key={idx} {...post} />}</>
         ))}
       </div>
     </div>
