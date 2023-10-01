@@ -11,6 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 
 import back from "@/public/icons/back.svg";
 import plus from "@/public/icons/plus.svg";
+import warn from "@/public/icons/warn.svg";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -56,6 +57,13 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
           {essay.title}
         </h1>
         <Content components={components} />
+        {essay.private && (
+          <p className="text-gray-400 mt-8 flex">
+            <Image src={warn} alt="A warning icon" className="mr-2" />
+            This is a private page, and isn&apos;t accessible from the main
+            archive.
+          </p>
+        )}
       </div>
     </div>
   );
